@@ -98,11 +98,18 @@ $(document).ready(function (){
 	
 			var container = document.getElementById( 'st-container' ),
 				menuButton = document.querySelector('button[data-effect="st-effect-12"]'),
+				foxyBox = document.querySelector('nav#menu-12'),
 				buttons = Array.prototype.slice.call( document.querySelectorAll( '#st-trigger-effects > button' ) ),
 				eventtype = mobilecheck() ? 'touchstart' : 'click',
 				resetMenu = function() {
+
+					setTimeout( function() {
 					classie.remove( menuButton, 'menuButtonShrink' );
+					classie.remove( foxyBox, 'shadowBox' );
 					classie.remove( container, 'st-menu-open' );
+				$("nav.cl-effect-6").stop(true,true).css('opacity', '1').animate({marginTop: '4em',
+																				 opacity: 0 }, 85);	
+					}, 15 );
 				},
 				bodyClickFn = function(evt) {
 					if( !hasParentClass( evt.target, 'st-menu' ) ) {
@@ -122,6 +129,11 @@ $(document).ready(function (){
 					setTimeout( function() {
 						classie.add( menuButton, 'menuButtonShrink' );
 						classie.add( container, 'st-menu-open' );
+						classie.add( foxyBox, 'shadowBox' );
+						
+						$("nav.cl-effect-6").stop(true,true).css('opacity', '0').animate({marginTop: '0em',
+														     						opacity: 1 }, 400);
+						
 					}, 25 );
 					document.addEventListener( eventtype, bodyClickFn );
 				});
