@@ -576,6 +576,23 @@ button:hover {
 	background: #A50808;
 }
 
+.menuButtonShrink {
+  border: none;
+  padding: 0em 8.5em;
+  position: absolute;
+  top: 0;
+  background: rgba(255, 255, 255, 0.19);
+  color: #fff;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-size: 0.6em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
 /* ==========================================================================
    MAIN COVER PAGE STYLES
 ========================================================================== */

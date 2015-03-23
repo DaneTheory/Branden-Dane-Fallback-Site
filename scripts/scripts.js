@@ -78,8 +78,8 @@ $(document).ready(function (){
 
 
 $(document).ready(function (){
-	 var SidebarMenuEffects = (function() {
 	
+	var SidebarMenuEffects = (function() {
 	 	function hasParentClass( e, classname ) {
 			if(e === document) return false;
 			if( classie.has( e, classname ) ) {
@@ -97,9 +97,11 @@ $(document).ready(function (){
 		function init() {
 	
 			var container = document.getElementById( 'st-container' ),
+				menuButton = document.querySelector('button[data-effect="st-effect-12"]'),
 				buttons = Array.prototype.slice.call( document.querySelectorAll( '#st-trigger-effects > button' ) ),
 				eventtype = mobilecheck() ? 'touchstart' : 'click',
 				resetMenu = function() {
+					classie.remove( menuButton, 'menuButtonShrink' );
 					classie.remove( container, 'st-menu-open' );
 				},
 				bodyClickFn = function(evt) {
@@ -118,6 +120,7 @@ $(document).ready(function (){
 					container.className = 'st-container';
 					classie.add( container, effect );
 					setTimeout( function() {
+						classie.add( menuButton, 'menuButtonShrink' );
 						classie.add( container, 'st-menu-open' );
 					}, 25 );
 					document.addEventListener( eventtype, bodyClickFn );
