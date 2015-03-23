@@ -267,6 +267,7 @@ body,
     width: 100%;
     float: left;
     overflow: hidden;
+    -webkit-transition:-webkit-filter 0.25s ease-in-out; 
 }
 
 .screen {
@@ -1597,19 +1598,87 @@ h2.nukeProject {
     opacity: 1;
 }
 
-#blurMe {
+.blurMe {
   display: inline-block;
   float: right;
   text-align: right;
   z-index: 500;
 }
 
-.blur {
-	-webkit-filter:blur(5px);
-	-moz-filter:blur(5px);
-	-o-filter:blur(5px);
-	-ms-filter:blur(5px);
-	filter:blur(5px);
+.blur1 {
+	-webkit-filter:blur(3px) grayscale(1) contrast(0.85);
+	-moz-filter:blur(3px) grayscale(1) contrast(0.85);
+	-o-filter:blur(3px) grayscale(1) contrast(0.85);
+	-ms-filter:blur(3px) grayscale(1) contrast(0.85);
+	filter:blur(3px) grayscale(1) contrast(0.85);
+	-webkit-filter: blur(3px) grayscale(1) contrast(0.85);
+}
+
+.blur2 {
+	-webkit-filter:blur(3px) grayscale(1) contrast(0.95);
+	-moz-filter:blur(3px) grayscale(1) contrast(0.95);
+	-o-filter:blur(3px) grayscale(1) contrast(0.95);
+	-ms-filter:blur(3px) grayscale(1) contrast(0.95);
+	filter:blur(3px) grayscale(1) contrast(0.95);
+	-webkit-filter: blur(3px) grayscale(1) contrast(0.95);
+}
+
+.blur3 {
+	-webkit-filter:blur(3px) grayscale(1) contrast(1.2);
+	-moz-filter:blur(3px) grayscale(1) contrast(1.2);
+	-o-filter:blur(3px) grayscale(1) contrast(1.2);
+	-ms-filter:blur(3px) grayscale(1) contrast(1.2);
+	filter:blur(3px) grayscale(1) contrast(1.2);
+	-webkit-filter: blur(3px) grayscale(1) contrast(1.2);
+}
+
+.realBlur1 {
+	-webkit-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-moz-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-o-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-ms-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+}
+
+.realBlur2 {
+	-webkit-filter:blur(4px) contrast(0.75) grayscale(1);
+	-moz-filter:blur(4px) contrast(0.75) grayscale(1);
+	-o-filter:blur(4px) contrast(0.75) grayscale(1);
+	-ms-filter:blur(4px) contrast(0.75) grayscale(1);
+	filter:blur(4px) contrast(0.75) grayscale(1);
+}
+
+
+.realBlur3 {
+	-webkit-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-moz-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-o-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-ms-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+}
+
+.realBlur4 {
+	-webkit-filter:blur(4px) contrast(0.85) sepia(0.95);
+	-moz-filter:blur(4px) contrast(0.85) sepia(0.95);
+	-o-filter:blur(4px) contrast(0.85) sepia(0.95);
+	-ms-filter:blur(4px) contrast(0.85) sepia(0.95);
+	filter:blur(4px) contrast(0.85) sepia(0.95);
+}
+
+.realBlur5 {
+	-webkit-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-moz-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-o-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	-ms-filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+	filter:blur(6px) contrast(0.95) grayscale(1) sepia(0.4);
+}
+
+.realBlur6 {
+	-webkit-filter:blur(3px) contrast(1.5) grayscale(1) sepia(0.1);
+	-moz-filter:blur(3px) contrast(1.5) grayscale(1) sepia(0.1);
+	-o-filter:blur(3px) contrast(1.5) grayscale(1) sepia(0.1);
+	-ms-filter:blur(3px) contrast(1.5) grayscale(1) sepia(0.1);
+	filter:blur(3px) contrast(1.5) grayscale(1) sepia(0.1);
 }
 
 canvas {

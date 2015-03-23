@@ -7,28 +7,135 @@ $(window).load(function() {
 
 // Site Blur On Social Button Hover
 $(document).ready(function () {
-	$("#blurMe a").hover(
+	var timer = 0;
+	$(".blurMe .github a").hover(
 		function () {
-			$("#mainScene").addClass("blur");
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("blur1");
 		},
 		function () {
-			$("#mainScene").removeClass("blur");
+				$("#mainScene").toggleClass("blur1");
+
 	});
 });
 
+$(document).ready(function () {
+	var timer = 0;
+	$(".blurMe .linkedin a").hover(
+		function () {
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("blur2");
+		},
+		function () {
+				$("#mainScene").toggleClass("blur2");
+
+	});
+});
+
+$(document).ready(function () {
+	var timer = 0;
+	$(".blurMe .behance a").hover(
+		function () {
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("blur3");
+		},
+		function () {
+				$("#mainScene").toggleClass("blur3");
+
+	});
+});
+
+$(document).ready(function () {
+	var timer = 0;
+	$("nav#menu-12 .icon-about").hover(
+		function () {
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("realBlur1");
+		},
+		function () {
+				$("#mainScene").toggleClass("realBlur1");
+
+	});
+});
+
+$(document).ready(function () {
+	var timer = 0;
+	$("nav#menu-12 .icon-work").hover(
+		function () {
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("realBlur2");
+		},
+		function () {
+				$("#mainScene").toggleClass("realBlur2");
+
+	});
+});
+
+$(document).ready(function () {
+	var timer = 0;
+	$("nav#menu-12 .icon-journal").hover(
+		function () {
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("realBlur3");
+		},
+		function () {
+				$("#mainScene").toggleClass("realBlur3");
+
+	});
+});
+
+$(document).ready(function () {
+	var timer = 0;
+	$("nav#menu-12 .icon-nuketown").hover(
+		function () {
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("realBlur4");
+		},
+		function () {
+				$("#mainScene").toggleClass("realBlur4");
+
+	});
+});
+
+$(document).ready(function () {
+	var timer = 0;
+	$("nav#menu-12 .icon-contact").hover(
+		function () {
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("realBlur5");
+		},
+		function () {
+				$("#mainScene").toggleClass("realBlur5");
+
+	});
+});
+
+$(document).ready(function () {
+	var timer = 0;
+	$("button").hover(
+		function () {
+			clearTimeout(timer);
+			$("#mainScene").toggleClass("realBlur6");
+		},
+		function () {
+				$("#mainScene").toggleClass("realBlur6")
+
+	});
+});
+
+
 $(document).ready(function (){
-			var screenIndex = 1,
-		    isTransitioning = false,
-		    transitionDur = 500,
-		    BV,
+			var BV,
 		    isTouch = Modernizr.touch;
-			var BV = new $.BigVideo({useFlashForFirefox:false, forceAutoplay:isTouch});
+			var BV = new $.BigVideo({useFlashForFirefox:false, forceAutoplay:isTouch, container: $('#mainScene')});
 			var $bigImage = $("#mainScene");
 			BV.init();
 				
 				if (Modernizr.touch) {
+				
 					BV.show('video/bgFallback.gif');
 				} else {
+					
 						BV.show(
 	        				{type: "video/mp4",  src: "video/bgMP4.mp4", type: "video/webm", src: "video/bgWEBM.webm" }, {ambient:true, doLoop:true}
 						);
